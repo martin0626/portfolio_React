@@ -1,0 +1,13 @@
+.mainBtn {
+    color: $textHoverColor;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid $textHoverColor;
+    border-radius: 9999px;
+    transition: all 0.5s;
+
+    &:hover{
+        color: $textColorWhite !important;
+        background-color: $textHoverColor;
+        box-shadow: $mainShodws;
+    }
+}
