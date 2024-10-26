@@ -1,5 +1,5 @@
 .skills {
-    max-height: 80vh;
+    min-height: 80vh;
     background-color: $mainColor;
     display: flex;
     align-items: center;
@@ -9,8 +9,8 @@
     padding: 6rem 6rem 12rem 6rem;
     
     &-header{
-        margin-top: 4rem;
-        max-width: 72rem;
+        // margin-top: 4rem;
+        max-width: 52rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;

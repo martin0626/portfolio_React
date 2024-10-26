@@ -12,6 +12,13 @@
     margin-bottom: 6rem;
 }
 
+@media only screen and (max-width: $breakpoint-small) {
+    .navigation {
+        padding: 2.2rem 1rem;
+        width: 100%;
+    }
+}
+
 
 .logoNav{
     p{

@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    font-size: 1.2rem;
 
     &-logo{
         width: 6rem;
@@ -39,11 +40,18 @@
 
         img{
             width: inherit;
-            height: 100%;
-            width: 100px;
+            max-height: 100%;
         }
+
+        &:hover{
+            transition: all 0.8s;
+            transform: scale(110%);
+        }
+
     }
 }
+
+
 
 @media only screen and (max-width: $breakpoint-medium + 150px) {
     .tech-stack{
@@ -53,5 +61,9 @@
 
     .stack{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .singleTech:last-child{
+        grid-column:  1 / 2 span;
     }
 }

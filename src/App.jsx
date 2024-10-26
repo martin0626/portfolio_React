@@ -1,14 +1,30 @@
-import Hero from "./components/HeroSec/HeroSec.jsx"
-import Navigation from "./components/NavBar/Navigation.jsx"
-import Skills from "./components/Skills/SkillsSec.jsx"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import RootPage from "./pages/Root.jsx"
+import HomePage from "./pages/Home.jsx"
+import ContactPage from "./pages/Contact.jsx"
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootPage/>,
+    children: [
+      {
+        index: true,
+        element: <HomePage/>,
+      },
+      {
+        path: 'contact',
+        element: <ContactPage/>,
+      },
+    ]
+  }
+])
+
 
 export default function App() {
 
   return (
-    <>
-      <Navigation/>
-      <Hero/>
-      <Skills/>
-    </>
+    <RouterProvider router={router} />
   )
 }
