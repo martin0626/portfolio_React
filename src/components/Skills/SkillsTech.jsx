@@ -44,7 +44,7 @@ const techStackLogos = [
     {
         title: "Python Django",
         logo: "https://img.icons8.com/color/512/django.png",
-        alt: "Python Logo"
+        alt: "Python Django Logo"
     },
 ]
 

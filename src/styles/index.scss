@@ -2,6 +2,8 @@
 @import './Abstract/variables';
 @import './Global/buttons';
 @import './Global/text';
+@import './Global/animations';
+
 
 
 //Navigation
@@ -17,7 +19,8 @@
 //Projects Sectio
 @import './Projects/projects';
 
-
+//Contact
+@import './Contact/contact';
 
 
 * {

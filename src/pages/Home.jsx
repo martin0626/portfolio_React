@@ -4,10 +4,10 @@ import Skills from "../components/Skills/SkillsSec.jsx"
 
 export default function HomePage(){
     return(
-        <>
+        <div className="show-left">
             <Hero/>
             <Skills/>
             <Projects/>
-        </>
+        </div>
     )
 }

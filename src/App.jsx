@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import RootPage from "./pages/Root.jsx"
 import HomePage from "./pages/Home.jsx"
 import ContactPage from "./pages/Contact.jsx"
+import ProjectPage from "./pages/Project.jsx"
 
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <ContactPage/>,
+      },
+      {
+        path: 'project/:id',
+        element: <ProjectPage/>,
       },
     ]
   }

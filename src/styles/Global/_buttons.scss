@@ -13,3 +13,21 @@
     }
 }
 
+
+.submitBtn {
+    color: $textColorWhite;
+    background-color: $textHoverColor;
+    padding: 0.4rem 1.2rem 0.6rem 1.2rem;
+    border: 2px solid $textHoverColor;
+    border-radius: 9999px;
+    transition: all 0.5s;
+    box-shadow: $mainShodws;
+    font-size: 1.4rem;
+
+    &:hover{
+        color: $textHoverColor !important;
+        cursor: pointer;
+        background-color: $textColorWhite;
+    }
+}
+

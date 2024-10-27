@@ -1,5 +1,10 @@
+import ConactSection from "../components/Contact/Contact";
+import ContactForm from "../components/Contact/ContactForm";
+
 export default function ContactPage(){
     return(
-        <h1>ContactPage</h1>
+        <section className="show-right text-euro">
+            <ConactSection/>
+        </section>
     )
 }

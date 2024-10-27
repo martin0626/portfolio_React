@@ -10,7 +10,7 @@ export default function Hero() {
         </div>
        <div className="hero-authorImg">
             <div className="imageAthor-container">
-                <img src="/public/avatar_Martin.png" alt="" />
+                <img src="/avatar_Martin.png" alt="" />
             </div>
        </div>
        <div className="hero-contentImg">
