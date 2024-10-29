@@ -10,6 +10,7 @@
     font-family: "eurostile", sans-serif;
     font-weight: bold !important;
     font-size: 3.2rem;
+    letter-spacing: 1px;
 }
 
 
@@ -21,8 +22,10 @@
     font-family: "eurostile", sans-serif;
     font-weight: bold !important;
     font-size: 2.6rem;
+    letter-spacing: 1px;
+    
 }
 
 .white-text{
-    color: $textColorWhite;
+    color: $textColorWhite !important;
 }
