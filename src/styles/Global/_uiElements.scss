@@ -1,0 +1,40 @@
+.notification-outer{
+    position: fixed;
+    width: auto;
+    z-index: 9999;
+    top: 10%;
+    right: 10%;
+    box-shadow: $mainShodws;
+    border-radius: 9999px;
+    padding: 1rem;
+
+    @media only screen and (max-width: $breakpoint-small) {
+        right: 2%;
+    }
+}
+
+.notification{
+    z-index: 10000;
+    height: 6rem;
+    border-radius: inherit;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    font-size: 1.2rem;
+
+    &-status {
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+}
+
+
+.errNotification {
+    background-color: $errColor;
+}
+
+.succNotification {
+    background-color: #6d07f3bb;
+}
