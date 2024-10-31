@@ -1,12 +1,11 @@
 import { useParams } from "react-router-dom"
+import ProjectDetails from "../components/ProjectDetails/ProjectDetails"
 
 export default function ProjectPage(){
 
     const { id } = useParams()
 
     return(
-        <section>
-            <h1>Project {id}</h1>
-        </section>
+        <ProjectDetails/>
     )
 }
