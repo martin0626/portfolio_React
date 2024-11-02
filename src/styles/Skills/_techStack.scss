@@ -1,6 +1,8 @@
+@use "../Abstract/variables";
+
 .tech-stack{
-    background-color: $background-color;
-    box-shadow: $mainShodws;
+    background-color: variables.$background-color;
+    box-shadow: variables.$mainShodws;
 
     display: flex;
     flex-direction: column;
@@ -37,6 +39,8 @@
         height: 6rem;
         overflow: hidden;
         border-radius: 8px;
+        transition: all 0.8s;
+
 
         img{
             width: inherit;
@@ -44,7 +48,6 @@
         }
 
         &:hover{
-            transition: all 0.8s;
             transform: scale(110%);
         }
 
@@ -53,7 +56,7 @@
 
 
 
-@media only screen and (max-width: $breakpoint-medium + 150px) {
+@media only screen and (max-width: variables.$breakpoint-medium + 150px) {
     .tech-stack{
         padding: 2rem;
         margin-inline: 2rem;
@@ -63,7 +66,4 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .singleTech:last-child{
-        grid-column:  1 / 2 span;
-    }
 }

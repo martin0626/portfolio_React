@@ -1,33 +1,46 @@
+@use "../Abstract/variables";
+
 .mainBtn {
-    color: $textHoverColor;
+    color: variables.$textHoverColor;
     padding: 0.4rem 1.2rem 0.6rem 1.2rem;
-    border: 2px solid $textHoverColor;
+    border: 2px solid variables.$textHoverColor;
     border-radius: 9999px;
     transition: all 0.5s;
 
     &:hover{
-        color: $textColorWhite !important;
+        color: variables.$textColorWhite !important;
         cursor: pointer;
-        background-color: $textHoverColor;
-        box-shadow: $mainShodws;
+        background-color: variables.$textHoverColor;
+        box-shadow: variables.$mainShodws;
+    }
+}
+
+.inactiveBtn {
+    background-color: #3535357a;
+
+    &:hover{
+        color: variables.$mainColor !important;
+        cursor:not-allowed;
+        background-color: #3535357a;
+        box-shadow: variables.$mainShodws;
     }
 }
 
 
 .submitBtn {
-    color: $textColorWhite;
-    background-color: $textHoverColor;
+    color: variables.$textColorWhite;
+    background-color: variables.$textHoverColor;
     padding: 0.4rem 1.2rem 0.6rem 1.2rem;
-    border: 2px solid $textHoverColor;
+    border: 2px solid variables.$textHoverColor;
     border-radius: 9999px;
     transition: all 0.5s;
-    box-shadow: $mainShodws;
+    box-shadow: variables.$mainShodws;
     font-size: 1.4rem;
 
     &:hover{
-        color: $textHoverColor !important;
+        color: variables.$textHoverColor !important;
         cursor: pointer;
-        background-color: $textColorWhite;
+        background-color: variables.$textColorWhite;
     }
 }
 

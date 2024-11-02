@@ -1,6 +1,8 @@
+@use "../Abstract/variables";
+
 .skills {
     min-height: 80vh;
-    background-color: $mainColor;
+    background-color: variables.$mainColor;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +24,7 @@
 }
 
 
-@media only screen and (max-width: $breakpoint-medium) {
+@media only screen and (max-width: variables.$breakpoint-medium) {
     .skills {
         padding: 6rem 1rem 12rem 1rem;
         &-header{

@@ -1,0 +1,29 @@
+@use "../Abstract/variables";
+
+
+.footer {
+
+    margin-top: 42rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-main {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        background-color: variables.$mainColor;
+        z-index: 1;
+    }
+
+    &-contact {
+        position: relative;
+        min-height: 12rem;
+        width: 70%;
+        background-color: #040a30;
+        margin-bottom: -8rem;
+        margin-inline: 2rem;
+        overflow: hidden;
+        z-index: 2;
+        border-radius: 8px;
+    }
+}

@@ -1,33 +1,48 @@
 //Global/Abstract
-@import './Abstract/variables';
-@import './Global/buttons';
-@import './Global/text';
-@import './Global/animations';
-@import './Global/uiElements';
+@use 'Abstract/variables';
+@use 'Global/buttons';
+@use 'Global/text';
+@use 'Global/animations';
+@use 'Global/uiElements';
 
 
 //Navigation
-@import './Navigation/navigation';
+@use 'Navigation/navigation';
 
 //Hero section
-@import './Hero/hero';
+@use 'Hero/hero';
 
 //Skills Section
-@import './Skills/skills';
-@import './Skills/techStack';
+@use 'Skills/skills';
+@use 'Skills/techStack';
 
 //Projects Sectio
-@import './Projects/projects';
+@use 'Projects/projects';
 
 //Contact
-@import './Contact/contact';
+@use 'Contact/contact';
 
 
 //Project Details
-@import './ProjectDetails/projectDetails';
+@use 'ProjectDetails/projectDetails';
+
+
+//Footer
+@use 'Footer/footer';
+
+
+@font-face {
+  font-family: 'eurostile';
+  src: url('/fonnts.com-Eurostile_Medium.otf');
+  // src: url('../../../public/fonnts.com-Eurostile.otf');
+
+}
+
+
 
 
 * {
+    font-family: "eurostile", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -45,18 +60,18 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 
-    @media screen and (max-width: $breakpoint-medium) {
+    @media screen and (max-width: variables.$breakpoint-medium) {
       font-size: 80%;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
+    @media screen and (max-width: variables.$breakpoint-small) {
       font-size: 70%;
     }
 }
 
 body{
   font-family: "europa", sans-serif;
-  background-color: $background-color;
+  background-color: variables.$background-color;
   position: relative;
 }
 
@@ -64,7 +79,7 @@ body{
 
 a {
   text-decoration: none;
-  color: $textColor;
+  color: variables.$textColor;
 }
 
 
@@ -79,14 +94,14 @@ a {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   transition: all 0.3s;
-  border-radius: 6px;
+  // border-radius: 6px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: variables.$mainColor; 
   transition: all 0.3s;
-  border-radius: 6px;
+  // border-radius: 6px;
 }
 
 /* Handle on hover */

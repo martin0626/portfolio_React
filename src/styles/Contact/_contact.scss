@@ -1,8 +1,10 @@
+@use "../Abstract/variables";
+
 .contact {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 80%;
-    box-shadow: $mainShodws;
+    box-shadow: variables.$mainShodws;
     border-radius: 8px;
     margin: 0 auto;
     margin-bottom: 12rem;
@@ -13,13 +15,13 @@
         margin-inline: 2rem;
     }
 
-    @media screen and (max-width: $breakpoint-medium) {
+    @media screen and (max-width: variables.$breakpoint-medium) {
         grid-template-columns: repeat(1, 1fr);  
     }
 }
 
 .contact-info {
-    background-color: $mainColor;
+    background-color: variables.$mainColor;
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -56,7 +58,7 @@
                 }
 
                 cursor: pointer;
-                box-shadow: $mainShodwsLight;
+                box-shadow: variables.$mainShodwsLight;
             }
 
             
@@ -139,12 +141,12 @@
     display: flex;
     gap:2rem;
     width: 100%;
-    box-shadow: $mainShodws;
+    box-shadow: variables.$mainShodws;
     padding: 0.5rem 2rem;
     border-radius: 9999px;
     align-items: center;
     margin-top: 1rem;
-    background-color: $errColor;
+    background-color: variables.$errColor;
 }
 
 .selected-label{

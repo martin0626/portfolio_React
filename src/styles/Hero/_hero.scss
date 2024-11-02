@@ -1,3 +1,5 @@
+@use "../Abstract/variables";
+
 .hero{
     display: flex;
     flex-direction: column;
@@ -21,13 +23,13 @@
             max-width: 42rem;
         }
 
-        @media only screen and (max-width: $breakpoint-medium) {
+        @media only screen and (max-width: variables.$breakpoint-medium) {
             img {
                 max-width: 32rem;
             }
         }
 
-        @media only screen and (max-width: $breakpoint-small) {
+        @media only screen and (max-width: variables.$breakpoint-small) {
             img {
                 max-width: 22rem;
             }
@@ -37,7 +39,7 @@
 
 
 .imageAthor-container {
-    background-color: $textHoverColor;
+    background-color: variables.$textHoverColor;
     width: 18rem;
     height: 18rem;
     display: flex;

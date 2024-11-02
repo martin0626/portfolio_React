@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navigation from "../components/NavBar/Navigation";
 import { createContext, useRef, useState } from "react"
 import NotificationComp from "../components/UI/Notification";
+import FooterEl from "../components/Footer/Footer";
 
 
 export const NotificationContext = createContext();
@@ -39,6 +40,7 @@ export default function RootPage(){
             <section className="main-section">
                 <Outlet />
             </section>
+            <FooterEl/>
         </NotificationContext.Provider >
     )
 }
