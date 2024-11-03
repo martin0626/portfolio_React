@@ -26,7 +26,7 @@ export default function RootPage(){
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
-
+        
         // Set a new timeout to clear the value after 5 seconds
         timeoutRef.current = setTimeout(() => {
             clearNotification(); // Set to empty or default value after 5 seconds

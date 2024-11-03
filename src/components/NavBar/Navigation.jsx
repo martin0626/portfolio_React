@@ -1,17 +1,25 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navigation() {
   const [isOpenMobile, setIsOpenMobile] = useState(false);
   const [visibleNav, setVsisibleNav] = useState(true);
+  const sectionRef = useRef(null);
+  const location = useLocation();
 
+  useEffect(() => {
+    // Scroll to the top of the referenced section
+    if (sectionRef.current) {
+        sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [location]);
 
   const handleOpenNav = ()=>{
     setIsOpenMobile(!isOpenMobile);
   }
 
   return (
-    <nav className="navigation">
+    <nav ref={sectionRef} className="navigation">
       <div className="logoNav">
         <p>Logo</p>
       </div>
