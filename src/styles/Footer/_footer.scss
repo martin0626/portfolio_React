@@ -7,21 +7,59 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    
+
+
     &-main {
         position: relative;
         width: 100%;
         height: 50vh;
         background-color: variables.$mainColor;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        padding: 4rem 2rem;
+        gap: 2rem;
+        
+        
+
+        &-icons{
+            display: flex;
+            justify-content: center;
+            align-items:end;
+            gap: 2rem;
+            font-size: 1.6rem;
+            color: #fff !important;
+        }
+
+        &-icon {
+            border: 1px solid #ffffff7e;
+            padding: 1.4rem 1.6rem;
+            border-radius: 100%;
+            transition: all 0.3s;
+            color: #fff !important;
+            
+            
+
+            &:hover{
+                cursor: pointer;
+                background-color: #fff;
+                color: variables.$mainColor !important;
+                transform: scale(1.2);
+            }
+        }
     }
 
     &-contact {
         position: relative;
         min-height: 12rem;
-        width: 70%;
+        // width: 70%;
         background-image: linear-gradient(to left, #101f7e , variables.$mainColor);
         margin-bottom: -8rem;
-        margin-inline: 2rem;
+        margin-inline: 8rem;
         overflow: hidden;
         z-index: 2;
         border-radius: 8px;
@@ -33,7 +71,7 @@
         color: #fff;
         justify-items: center;
         text-align: center;
-        box-shadow: variables.$mainShodwsLight;
+        box-shadow: variables.$mainShodws;
 
         a{
             width: fit-content;
@@ -44,6 +82,30 @@
 
             &:hover{
                 border-color: variables.$mainColor;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-bottom: -12rem;
+            margin-inline: 2rem;
+
+
+            p{
+                padding-inline: 2rem;
+            }
+        }
+
+        @media screen and (max-width: variables.$breakpoint-medium) {
+            margin-bottom: -16rem;
+        }
+
+        @media screen and (max-width: variables.$breakpoint-small) {
+            
+            p{
+                padding-inline: 1rem;
             }
         }
     }

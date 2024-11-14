@@ -3,6 +3,7 @@ import RootPage from "./pages/Root.jsx"
 import HomePage from "./pages/Home.jsx"
 import ContactPage from "./pages/Contact.jsx"
 import ProjectPage from "./pages/Project.jsx"
+import PfPage from "./pages/Portfolio.jsx"
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         path: 'project/:id',
         element: <ProjectPage/>,
       },
+      {
+        path: 'portfolio',
+        element: <PfPage/>,
+      },
     ]
   }
 ])
@@ -30,7 +35,6 @@ const router = createBrowserRouter([
 
 
 export default function App() {
-
   return (
     <RouterProvider router={router} />
   )
