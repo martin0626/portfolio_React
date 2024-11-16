@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { NotificationContext } from "../../pages/Root";
-import { FaLinkedin, FaEnvelope, FaMapMarkerAlt  } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaGithub  } from "react-icons/fa";
 
 
 export default function ContactInfo({}){
@@ -62,6 +62,19 @@ export default function ContactInfo({}){
                 <h3>LinkedIn</h3>
                 <p>Martin Ivanov</p>
                 <p className={action === 'in' ? 'action action-shown' : 'action'}>Visit</p>
+            </div>
+            <div 
+                onMouseOver={()=>onHoverHandler('git')} 
+                onMouseLeave={()=>onHoverHandler('')}
+                onClick={()=>onVistHandler('https://github.com/martin0626')} 
+                className="contacts-single"
+            >
+                <span className="contacts-single-logo">
+                    <FaGithub />
+                </span>
+                <h3>GitHub</h3>
+                <p>Martin Ivanov (martin0626)</p>
+                <p className={action === 'git' ? 'action action-shown' : 'action'}>Visit</p>
             </div>
         </div>
     )

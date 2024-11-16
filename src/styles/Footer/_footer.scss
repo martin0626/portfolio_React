@@ -14,7 +14,7 @@
     &-main {
         position: relative;
         width: 100%;
-        height: 50vh;
+        height: 22rem;
         background-color: variables.$mainColor;
         z-index: 1;
         display: flex;
@@ -24,7 +24,9 @@
         padding: 4rem 2rem;
         gap: 2rem;
         
-        
+        @media screen and (max-width: 1000px) {
+            height: 32rem;
+        }
 
         &-icons{
             display: flex;
@@ -108,5 +110,18 @@
                 padding-inline: 1rem;
             }
         }
+    }
+}
+
+
+
+.footer-btn {
+    transition: all 0.3s !important;
+
+    &:hover {
+        background-color: #fff;
+        color: variables.$mainColor !important;
+        border: 2px solid #fff !important;
+        transform: scale(1.05);
     }
 }

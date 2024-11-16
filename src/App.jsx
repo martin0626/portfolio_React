@@ -3,7 +3,7 @@ import RootPage from "./pages/Root.jsx"
 import HomePage from "./pages/Home.jsx"
 import ContactPage from "./pages/Contact.jsx"
 import ProjectPage from "./pages/Project.jsx"
-import PfPage from "./pages/Portfolio.jsx"
+import ResumePage from "./pages/Resume.jsx"
 
 
 const router = createBrowserRouter([
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
         element: <ProjectPage/>,
       },
       {
-        path: 'portfolio',
-        element: <PfPage/>,
+        path: 'resume',
+        element: <ResumePage/>,
       },
     ]
   }

@@ -14,9 +14,16 @@
     
     border-radius: 8px;
 
-    margin-top: -6rem;
+    margin-top: -10rem;
     margin-inline: 12rem;
     margin-bottom: 12rem;
+
+
+    @media screen and (max-width: variables.$breakpoint-medium) {
+        margin-top: -14rem;
+    }
+
+
 }
 
 .stack {
