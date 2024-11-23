@@ -29,7 +29,7 @@
 .stack {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 2rem;
+    row-gap: 4rem;
     column-gap: 6rem;
 }
 
@@ -38,26 +38,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
     font-size: 1.2rem;
 
     &-logo{
-        width: 6rem;
-        height: 6rem;
+        font-size: 6rem;
         overflow: hidden;
-        border-radius: 8px;
         transition: all 0.8s;
-
-
-        img{
-            width: inherit;
-            max-height: 100%;
-        }
+        color: variables.$mainColor;
 
         &:hover{
             transform: scale(110%);
         }
-
     }
 }
 

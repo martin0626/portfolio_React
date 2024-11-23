@@ -1,4 +1,4 @@
-import ProjectGallery from "./ProjectGallery";
+import Gallery from "../UI/Gallery";
 import ProjectInfo from "./ProjectInfo";
 import ProjectSkills from "./ProjectSkills";
 
@@ -12,7 +12,7 @@ export default function ProjectDetails(){
     return (
         <section className="details show-right">
             <h1 className="mainHeader">Project Name</h1>
-            <ProjectGallery images={images}/>
+            <Gallery images={images}/>
             <div className="details-info">
                 <ProjectSkills/>
                 <ProjectInfo/>

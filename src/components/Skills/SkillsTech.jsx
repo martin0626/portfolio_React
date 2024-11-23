@@ -1,4 +1,6 @@
 import SingleTech from "./singleTech"
+import { FaJsSquare, FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaSass, FaGitAlt, FaPython } from "react-icons/fa";
+import { SiDjango } from "react-icons/si";
 
 const techStackLogos = [
     {
@@ -57,9 +59,22 @@ export default function TechStack(){
                 <h1 className="secondaryHeader">My Tech Stack</h1>
             </div>
             <div className="stack">
-                {techStackLogos.map(el=>{
+                {/* {techStackLogos.map(el=>{
                     return <SingleTech logo={el.logo} alt={el.alt} title={el.title}/>
-                })}
+                })} */}
+                <SingleTech title="JavaScript"/>
+                <SingleTech title="React"/>
+                <SingleTech title="Node JS"/>
+                <SingleTech title="CSS"/>
+                <SingleTech title="HTML"/>
+                <SingleTech title="Sass"/>
+                <SingleTech title="Git"/>
+                <SingleTech title="Python"/>
+                <SingleTech title="Django"/>
+                
+                
+                
+                
             </div>
           
         </section>

@@ -40,3 +40,150 @@
 .succNotification {
     background-color: #6d07f3bb;
 }
+
+
+
+//Gallery
+
+
+$dots-color: #fff;
+$dots-hover: variables.$mainColor;
+
+$dark-dots-color: variables.$mainColor;
+$dark-dots-hover: #fff;
+
+$arrow-color: variables.$mainColor;
+$arrow-hover:  variables.$mainColorLight;
+
+$dark-arrow-color: #fff;
+$dark-arrow-hover: #ffffff83;
+
+
+
+/* Default theme (light) */
+:root {
+    --dots-color: #{$dots-color};
+    --dots-hover: #{$dots-hover};
+    --arrow-color: #{$arrow-color};
+    --arrow-hover: #{$arrow-hover};
+  }
+  
+  /* Dark theme */
+  .dark-mode {
+    --dots-color: #{$dark-dots-color};
+    --dots-hover: #{$dark-dots-hover};
+    --arrow-color: #{$dark-arrow-color};
+    --arrow-hover: #{$dark-arrow-hover};
+  }
+
+
+
+.gallery{
+
+    position: relative;
+    transition: all 0.5s;
+    min-height: 60vh;
+
+    &-label{
+        color: #fff;
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    &-img{
+        width: 100%;
+        max-width: 72rem;
+        display: flex;
+        transition: all 0.5s;
+        position: relative;
+    }
+
+    &-img-conatiner {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: all 0.5s;
+
+        img{
+            width: 100%; /* Make the image responsive */
+            height: 100%; /* Ensure it fills the container */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            object-position: center; /* Center the image */
+            
+        }
+        &:hover{
+            transform: scale(1.05);
+            cursor: grab;
+        }
+    }
+
+    &-arrow{
+        position: absolute;
+        color: var(--arrow-color);
+        font-size: 2rem;
+
+        svg{
+
+            transition: all 0.5s;
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.2);
+                color: var(--arrow-hover);
+            }
+        }
+
+        @media screen and (max-width: variables.$breakpoint-medium) {
+            display: none;
+        }
+
+    }
+}
+
+.gallery-dots {
+    // position: absolute;
+    padding: 1rem;
+    z-index: 3;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+
+    &-single {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        border: 1px solid #33333377;
+        transition: all 0.5s;
+        background-color: var(--dots-color);
+
+    
+        &:hover {
+            cursor: pointer;
+            background-color: var(--dots-hover);
+        }
+    }
+}
+
+.leftA {
+    left: -8%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rightA {
+    right: -8%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+.active-dot-r{
+    background-color: var(--dots-hover) !important;
+}
