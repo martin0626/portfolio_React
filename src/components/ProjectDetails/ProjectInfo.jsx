@@ -1,13 +1,22 @@
-export default function ProjectInfo(){
+export default function ProjectInfo({description, codeLink, demoLink}){
+
+    const handleSelect = (link)=>{
+        debugger
+        if(link){
+            window.open(link);
+        }
+    }
+
     return (
         <div className="project-info details-info-card">
             <h2>Project Info: </h2>
             <div className="project-info-text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ducimus laudantium distinctio quos! Numquam similique dicta aliquam officiis enim natus molestiae sequi quod quisquam maiores, molestias alias inventore deserunt eius. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus harum et ratione quo, cumque dolorem deserunt nemo illum dignissimos voluptates, explicabo qui quam esse aspernatur ipsa iste corrupti ut itaque.</p>
+                <p>{description}</p>
             </div>
-            <button className="mainBtn project-info-btn">View Code</button>
-            <button className="mainBtn project-info-btn inactiveBtn">Visit Site</button>
-
+            <div className="project-info-btns">
+                <button className="mainBtn project-info-btn" onClick={()=>handleSelect(codeLink)}>View Code</button>
+                <button className={demoLink ? "mainBtn project-info-btn" : "mainBtn project-info-btn inactiveBtn"} onClick={()=>handleSelect(demoLink)}>Visit Site</button>
+            </div>
         </div>
     )
 }

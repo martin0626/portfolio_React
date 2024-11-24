@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import getImageURL from "../../utils/image-util";
+import { image } from "motion/react-client";
 
-export default function Gallery({images, titles=[], mode='light'}){
+export default function Gallery({images, folder, titles=[], mode='light'}){
     const [ currentActivePos,  setCurrentActivePos] = useState(0);
     const [currentEffectSide, setCurrentEffectSide] = useState('');
 
@@ -72,7 +74,7 @@ export default function Gallery({images, titles=[], mode='light'}){
                                     transition={{duration: 0.5}}
                                     layout exit={{ x: 300, opacity: 0 }} 
                                     key={index}  
-                                    src={img}
+                                    src={getImageURL(img, folder)}
                                     />
                                 }
                             })

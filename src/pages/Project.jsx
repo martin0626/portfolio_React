@@ -7,6 +7,6 @@ export default function ProjectPage(){
     const { id } = useParams()
 
     return(
-        <ProjectDetails/>
+        <ProjectDetails id={id}/>
     )
 }
