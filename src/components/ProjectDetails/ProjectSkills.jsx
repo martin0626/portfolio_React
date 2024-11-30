@@ -5,7 +5,7 @@ export default function ProjectSkills({skills}){
         <div className="project-skills details-info-card">
             <h2>Used Technologies: </h2>
             <div className="project-skills-info">
-                {skills.map(s=> <SingleTech title={s}/>)}
+                {skills.map(s=> <SingleTech title={s} key={s}/>)}
             </div>
         </div>
     )

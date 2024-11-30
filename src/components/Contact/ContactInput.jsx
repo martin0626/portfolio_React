@@ -16,7 +16,7 @@ export default function ContactInput({typeElement='input', label, ...props}){
 
     return(
         <div className="contact-form-input">
-            <label className={selectedInput && "selected-label"}>{label}</label>
+            <label className={selectedInput ? "selected-label" : ""}>{label}</label>
             {
                 typeElement === 'input'
                     ?

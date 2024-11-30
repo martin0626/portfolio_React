@@ -73,7 +73,7 @@ export default function Gallery({images, folder, titles=[], mode='light'}){
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{duration: 0.5}}
                                     layout exit={{ x: 300, opacity: 0 }} 
-                                    key={index}  
+                                    key={index + 1000}  
                                     src={getImageURL(img, folder)}
                                     />
                                 }
@@ -87,7 +87,7 @@ export default function Gallery({images, folder, titles=[], mode='light'}){
                 </motion.div>
                 <div className="gallery-dots">
                     {images.map((e, i)=>{
-                        return <div className={i == currentActivePos ? 'gallery-dots-single active-dot-r' : 'gallery-dots-single'} onClick={()=>{handleChangeIndex(i)}}></div>
+                        return <div key={i} className={i == currentActivePos ? 'gallery-dots-single active-dot-r' : 'gallery-dots-single'} onClick={()=>{handleChangeIndex(i)}}></div>
                     })}
                 </div>
             </AnimatePresence>

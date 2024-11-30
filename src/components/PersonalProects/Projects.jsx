@@ -16,7 +16,7 @@ export default function Projects(){
             </div>
             <div className="projects-content">
                 {
-                    projects.map(p=> <SingleProject project={p}/>)
+                    projects.map(p=> <SingleProject key={p.id} project={p}/>)
                 }
             </div>
         </section>
