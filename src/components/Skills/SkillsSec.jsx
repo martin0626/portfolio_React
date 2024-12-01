@@ -6,8 +6,8 @@ export default function Skills() {
       <>
         <section className="skills">
           <div className="skills-header">
-            <h1 className="mainHeader white-text">Hi, I’m Martin. Nice to meet you!</h1>
-            <h2 className="white-text">Since beginning my journey as a freelance designer 12 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops.</h2>
+            <h1 className="mainHeader white-text">Hi, I'm Martin. Nice to meet you!</h1>
+            <h2 style={{letterSpacing: "1px"}} className="white-text">For the past three years, I've immersed myself in learning web development technologies such as React, HTML, CSS, Node.js, Python, and Django, building a solid foundation in both frontend and backend development.<br/> Over the last year, I have focused on frontend development, particularly React applications. Now, I aim to expand my knowledge by creating full-stack applications with React and Node.js to become a full-stack web developer.</h2>
           </div>
         </section>
         <TechStack/>

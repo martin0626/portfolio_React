@@ -5,8 +5,8 @@ export default function Hero() {
     return (
       <section className="hero">
         <div className="hero-header">
-          <h1 className="mainHeader">Designer, Frontend Developer & Mentor</h1>
-          <p>I design and code beautifully simple things, and I love what I do.</p>
+          <h1 className="mainHeader">I'm Junior Frontend Developer</h1>
+          <p>A passionate junior frontend developer eager to build intuitive and user-friendly web interfaces using modern tools and technologies.</p>
         </div>
        <div className="hero-authorImg">
             <div className="imageAthor-container">

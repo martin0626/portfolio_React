@@ -35,6 +35,17 @@ const PROJECTS = [
         demoLink: undefined,
         codeLink: 'https://github.com/martin0626/Wood_shop_project',
     },
+    {
+        id: '4',
+        name: 'Portfolio Project',
+        longDescription: "I built this page from scratch using React, React Roter, Sass, HTML and Git. I built it to collect all my projects in one place and represent my experience and knowledge in the field of programming.\n Functionality of this project is simple and aimed at my presentation to future employers. There are a few pages and cotact form, which can be used to contact me directly.",
+        shortDescription: 'My personal web page, which I build from scratch to represent my current knowledge and work.',
+        coverImg: "WoodShop_1.png",
+        gallery: ["WoodShop_1.png", "WoodShop_9.png" , "WoodShop_8.png", "WoodShop_2.png", "WoodShop_3.png", "WoodShop_4.png", "WoodShop_5.png", "WoodShop_6.png", "WoodShop_7.png"],
+        skills: ['React', 'HTML', 'CSS', 'Git'],
+        demoLink: '/',
+        codeLink: 'https://github.com/martin0626/portfolio_React',
+    },
 ]
 
 
