@@ -5,7 +5,7 @@ const PROJECTS = [
     {
         id: '1',
         name: 'Home Cleaning',
-        longDescription: 'It is static web page where I used only React, Sass and HTML for creating. It is fully responsive and can be used on any device. This was my first try to do more beautifull and responsive web page and also my first project using Sass preprocessor.\n Functionallity of the project is really simple. There is navigation which is scrolling to the exact section, rating form and contact for which is using "emailjs" for sending  emails after the contact form is correctly filled. ',
+        longDescription: 'It is a static web page where I used only React, Sass, and HTML to create it. It is fully responsive and can be used on any device. This was my first attempt at creating a more beautiful and responsive web page, as well as my first project using the Sass preprocessor.\n\nThe functionality of the project is quite simple. There is a navigation bar that scrolls to specific sections, a rating form, and a contact form that uses "EmailJS" for sending emails after the contact form is correctly filled out.',
         shortDescription: 'This is static web page where I used only React, Sass and HTML for creating.',
         coverImg: "Cleaning1.png",
         gallery: ["Cleaning1.png", "Cleaning2.png", "Cleaning3.png", "Cleaning4.png", "Cleaning5.png"],
@@ -16,8 +16,8 @@ const PROJECTS = [
     {
         id: '2',
         name: 'Omnifood (Course Project)',
-        longDescription: ' My Final project after completion of "Responsive Real-World Websites with HTML and CSS" course. For this responsive web page was used only HTML and CSS. You can check live demo of the project.',
-        shortDescription: 'My Final project after completion of "Responsive Real-World Websites with HTML and CSS" course.',
+        longDescription: 'This is my final project after completing the "Responsive Real-World Websites with HTML and CSS" course. For this responsive web page, I used only HTML and CSS. You can check out a live demo of the project.',
+        shortDescription: 'This is my final project after completing the "Responsive Real-World Websites with HTML and CSS" course.',
         coverImg: "Omnifood1.png",
         gallery: ["Omnifood1.png", "Omnifood2.png", "Omnifood3.png", "Omnifood4.png", "Omnifood5.png"],
         skills: ['HTML', 'CSS', 'Git'],
@@ -27,7 +27,7 @@ const PROJECTS = [
     {
         id: '3',
         name: 'Wood Store',
-        longDescription: 'React Ecommerce application, where my part is only the frontend functionality. For this project I used React, React Router, Redux/Redux Toolkit, FramerMotion(React animations), HTML, CSS and also GitHub to store my project and add changes.\n This project is exercise for improving my React skills without emphasizing on the visuallization of the page. With this project I learned and consolidated knowledge of Components, Hooks, working with API requests, React Router, managing Global state with Redux, authorization using AUTH Token, using external libraries  and dealing with different problems during the development. Backend part is on JAVA (created by my colleague), which provides me API for the products and orders creation. I also used "Speedy" develpoment API, which I found and use to fetch all offices in Bulgaria in JSON format.\n Functionallity: check products, add to cart, order, searching by name of the product, sorting and filtering products, products CRUD operations after login as an admin with username and password.',
+        longDescription: 'This is a React eCommerce application, where my role was focused solely on frontend functionality. For this project, I used React, React Router, Redux/Redux Toolkit, Framer Motion (for animations), HTML, CSS, and GitHub to store the project and manage changes.\n\nThis project served as an exercise to improve my React skills, with less emphasis on the visualization of the page. Through this work, I learned and consolidated my knowledge of components, hooks, working with API requests, React Router, managing global state with Redux, handling authorization using AUTH tokens, integrating external libraries, and solving various challenges during development.\n\nThe backend, developed in Java by a colleague, provides APIs for product and order creation. Additionally, I used the "Speedy" development API, which allowed me to fetch all office locations in Bulgaria in JSON format.\n\nFunctionality: the application allows users to view products, add items to the cart, place orders, search for products by name, sort and filter products, and perform CRUD operations on products after logging in as an admin with a username and password.',
         shortDescription: 'React Ecommerce application, where my part is only the frontend functionality.',
         coverImg: "WoodShop_1.png",
         gallery: ["WoodShop_1.png", "WoodShop_9.png" , "WoodShop_8.png", "WoodShop_2.png", "WoodShop_3.png", "WoodShop_4.png", "WoodShop_5.png", "WoodShop_6.png", "WoodShop_7.png"],
@@ -38,7 +38,7 @@ const PROJECTS = [
     {
         id: '4',
         name: 'Portfolio Project',
-        longDescription: "I built this page from scratch using React, React Roter, Sass, HTML and Git. I built it to collect all my projects in one place and represent my experience and knowledge in the field of programming.\n Functionality of this project is simple and aimed at my presentation to future employers. There are a few pages and cotact form, which can be used to contact me directly.",
+        longDescription: "I built this page from scratch using React, React Router, Sass, HTML, and Git. The purpose of this project was to unify all my work in one place and showcase my experience and knowledge in programming.\n\nThe functionality is simple and tailored to present myself to potential employers. It includes multiple pages and a contact form, which can be used to reach me directly.",
         shortDescription: 'My personal web page, which I build from scratch to represent my current knowledge and work.',
         coverImg: "WoodShop_1.png",
         gallery: ["WoodShop_1.png", "WoodShop_9.png" , "WoodShop_8.png", "WoodShop_2.png", "WoodShop_3.png", "WoodShop_4.png", "WoodShop_5.png", "WoodShop_6.png", "WoodShop_7.png"],

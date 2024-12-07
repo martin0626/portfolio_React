@@ -1,7 +1,14 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
-export default function ContactInput({typeElement='input', label, ...props}){
+export default function ContactInput({typeElement='input', label, isSending, ...props}){
     const [selectedInput, setSelectedInput] = useState(false);
+    const inputRef = useRef();
+    
+    useEffect(()=>{
+        if(inputRef.current?.value === ""){
+            setSelectedInput(isSending)
+        }
+    }, [isSending])
 
     const handleFocus = ()=>{
         setSelectedInput(true);
@@ -11,7 +18,6 @@ export default function ContactInput({typeElement='input', label, ...props}){
         if(e.target.value.trim() === ''){
             setSelectedInput(false);
         }
-        
     }
 
     return(
@@ -20,9 +26,9 @@ export default function ContactInput({typeElement='input', label, ...props}){
             {
                 typeElement === 'input'
                     ?
-                <input onFocus={handleFocus} onBlur={handleBlur} {...props} required/>
+                <input ref={inputRef} onFocus={handleFocus} onBlur={handleBlur} {...props} required/>
                     :
-                <textarea onFocus={handleFocus} onBlur={handleBlur} {...props} required/>
+                <textarea ref={inputRef} onFocus={handleFocus} onBlur={handleBlur} {...props} required/>
             }
 
         </div>

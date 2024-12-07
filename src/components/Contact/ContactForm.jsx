@@ -2,25 +2,54 @@ import { useContext, useState } from "react"
 import ContactInput from "./ContactInput";
 import { handleFormErrs } from '../../utils/helpers'
 import { NotificationContext } from "../../pages/Root";
+import emailjs  from "@emailjs/browser";
+
+
+
+const emailSender = (formElmemnt)=>{
+    const SERVICEid = import.meta.env.VITE_SERVICE_ID;
+    const TEMPLATEid = import.meta.env.VITE_TEMPLATE_ID;
+    const PUBLICKKEY = import.meta.env.VITE_PUBLIC_KEY;
+    
+
+    return emailjs.sendForm(SERVICEid, TEMPLATEid, formElmemnt, {
+        publicKey: PUBLICKKEY,
+    })
+}
+
 
 export default function ContactForm(){
     const [errMsg, setErrMsg] = useState('');
+    const [sending, setSending] = useState(false);
     const { notificationHandler } = useContext(NotificationContext);
+
+    
+
+
+    const sendEmail = async (formHTML)=>{
+        setSending(true);
+        try{
+            await emailSender(formHTML);
+            notificationHandler('Thank you! I will contact you ASAP! :)', 'success', 4000);
+            formHTML.reset()
+            setSending(false);
+
+        }catch(err){
+            notificationHandler('Something went wrong, this message is not received by Me!', 'err', 4000);
+            setSending(false);
+            formHTML.reset()
+        }
+    }
 
     const handleSubmit = (e)=>{
         e.preventDefault();
 
         const fd = new FormData(e.target);
         const data = Object.fromEntries(fd.entries());
-
         const errs = handleFormErrs(data);
         setErrMsg(errs);
 
-        if(errs === ''){
-            notificationHandler('Thank you! I will contact you ASAP! :)', 'success', 4000);
-            e.target.reset()
-        }
-        
+        if(errs === '') sendEmail(e.target);
     }
 
 
@@ -40,12 +69,15 @@ export default function ContactForm(){
                 className="text-euro"
                 type="text"
                 name="name"
+                isSending={sending}
             />
             <ContactInput 
                 label={'Email'} 
                 className="text-euro"
                 type="email"
                 name="email"
+                isSending={sending}
+
             />
             <ContactInput
                 typeElement='textarea'
@@ -54,8 +86,10 @@ export default function ContactForm(){
                 type="text"
                 name="message"
                 rows="4"
+                isSending={sending}
+
             />
-            <button className="submitBtn text-euro" type="submit">Send</button>
+            <button className="submitBtn text-euro" type="submit">{sending ? "Sending..." : "Send"}</button>
       </form>
     )
 }

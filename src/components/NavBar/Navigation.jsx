@@ -21,7 +21,7 @@ export default function Navigation() {
   return (
     <nav ref={sectionRef} className="navigation">
       <div className="logoNav">
-        <p>Logo</p>
+        <img src="/My-logo.png" alt="My Logo" />
       </div>
       <div className="linksNav text-euro">
         <Link to={'/'} rel="stylesheet">Home</Link>
