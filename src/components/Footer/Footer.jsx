@@ -14,7 +14,7 @@ export default function FooterEl(){
         <section className="footer">
             <div className="footer-contact">
                 <h1 className="secondaryHeader white-text">Check My Resume</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nam fuga dolorum magnam?</p>
+                <p>Click the button to view all my certificates and resume, which can also be downloaded.</p>
                 <Link to='/resume' className="mainBtn footer-btn">My Resume</Link>
             </div>        
             <div className="footer-main">

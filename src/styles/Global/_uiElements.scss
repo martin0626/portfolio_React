@@ -85,6 +85,10 @@ $dark-arrow-hover: #ffffff83;
     min-height: 100vh;
     padding: 2rem;
 
+    @media screen and (max-width: variables.$breakpoint-medium) {
+        min-height: 50vh;
+    }
+
     &-label{
         color: #fff;
         font-size: 1.4rem;
@@ -112,10 +116,11 @@ $dark-arrow-hover: #ffffff83;
             height: 100%; /* Ensure it fills the container */
             object-fit: cover; /* Ensures the image covers the area without distortion */
             object-position: center; /* Center the image */
-            
+            position: relative;
+            z-index: 2;
         }
         &:hover{
-            transform: scale(1.05);
+            // transform: scale(1.05);
             cursor: grab;
         }
     }
@@ -139,7 +144,6 @@ $dark-arrow-hover: #ffffff83;
         @media screen and (max-width: variables.$breakpoint-medium) {
             display: none;
         }
-
     }
 }
 

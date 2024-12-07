@@ -2,7 +2,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import getImageURL from "../../utils/image-util";
-import { image } from "motion/react-client";
 
 export default function Gallery({images, folder, titles=[], mode='light'}){
     const [ currentActivePos,  setCurrentActivePos] = useState(0);
