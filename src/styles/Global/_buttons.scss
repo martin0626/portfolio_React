@@ -2,10 +2,11 @@
 
 .mainBtn {
     color: variables.$textHoverColor;
-    padding: 0.4rem 1.2rem 0.6rem 1.2rem;
+    padding: 0.4rem 1.2rem;
     border: 2px solid variables.$textHoverColor;
     border-radius: 9999px;
     transition: all 0.5s;
+    font-family: "europa", sans-serif;
 
     &:hover{
         color: variables.$textColorWhite !important;
@@ -30,12 +31,14 @@
 .submitBtn {
     color: variables.$textColorWhite;
     background-color: variables.$textHoverColor;
-    padding: 0.4rem 1.2rem 0.6rem 1.2rem;
+    padding: 0.4rem 1.2rem;
     border: 2px solid variables.$textHoverColor;
     border-radius: 9999px;
     transition: all 0.5s;
     box-shadow: variables.$mainShodws;
     font-size: 1.4rem;
+    font-family: "europa", sans-serif !important;
+
 
     &:hover{
         color: variables.$textHoverColor !important;

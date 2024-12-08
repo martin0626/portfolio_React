@@ -98,26 +98,25 @@ $dark-arrow-hover: #ffffff83;
     }
 
     &-img{
-        width: 100%;
+        // width: 100%;
         max-width: 72rem;
+        
         display: flex;
         transition: all 0.5s;
         position: relative;
     }
 
     &-img-conatiner {
-        width: 100%;
-        overflow: hidden;
         border-radius: 8px;
-        transition: all 0.5s;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        position: relative;
 
         img{
-            width: 100%; /* Make the image responsive */
-            height: 100%; /* Ensure it fills the container */
-            object-fit: cover; /* Ensures the image covers the area without distortion */
-            object-position: center; /* Center the image */
-            position: relative;
-            z-index: 2;
+            max-width: 100%;
+            height: auto;
+            grid-area: 1 / 1;
         }
         &:hover{
             // transform: scale(1.05);
@@ -145,6 +144,20 @@ $dark-arrow-hover: #ffffff83;
             display: none;
         }
     }
+
+    &-loading{
+        width: 42rem;
+        height: 40vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        @media screen and (max-width: variables.$breakpoint-medium) {
+            height: 20vh;
+        }
+    }
+
 }
 
 .gallery-dots {
@@ -187,8 +200,32 @@ $dark-arrow-hover: #ffffff83;
 }
 
 
-
+.not-visible {
+    display: none;
+}
 
 .active-dot-r{
     background-color: var(--dots-hover) !important;
 }
+
+
+
+//LOADING Dots
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 60px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: l7 1s infinite linear;
+  }
+
+  @keyframes l7 {
+      33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+      50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+      66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+  }

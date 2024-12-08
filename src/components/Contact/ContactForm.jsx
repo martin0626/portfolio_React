@@ -89,7 +89,15 @@ export default function ContactForm(){
                 isSending={sending}
 
             />
-            <button className="submitBtn text-euro" type="submit">{sending ? "Sending..." : "Send"}</button>
+            {
+
+                sending
+                    ?
+                <button className="submitBtn text-euro" disabled  type="submit">Sending...</button>
+                    :
+                <button className="submitBtn text-euro"  type="submit">Send</button>
+                
+            }
       </form>
     )
 }
