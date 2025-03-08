@@ -25,6 +25,7 @@ export default function Navigation() {
       </div>
       <div className="linksNav text-euro">
         <Link to={'/'} rel="stylesheet">Home</Link>
+        <Link to={'/resume'} rel="stylesheet">Resume</Link>
         <Link to={'/contact'} className="mainBtn" rel="stylesheet">Contact Me</Link>
       </div>
     </nav>

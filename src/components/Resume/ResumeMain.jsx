@@ -1,7 +1,8 @@
 import resumePdf from "/MartinIvanov_Resume.pdf"
-import Gallery from "../UI/Gallery";
+// import Gallery from "../UI/Gallery";
 import certificatesObj from "../../data/certificates";
 import { useMemo } from "react";
+import GalleryComponent from "../UI/GalleryV2";
 
 
 export default function ResumeMain(){
@@ -16,14 +17,15 @@ export default function ResumeMain(){
     };
 
     return(
-        <section className="resume">
+        <section className="resume show-right">
             <div className="resume-header">
                 <h1 className="mainHeader">My Resume</h1>
                 <div className="resume-header-actions">
                     <p onClick={handleDownload} className="mainBtn">Download PDF</p>
                 </div>
             </div>
-            <Gallery images={images} folder={'certificates'} titles={titles} mode="dark"/>
+            {/* <Gallery images={images} folder={'certificates'} titles={titles} mode="dark"/> */}
+            <GalleryComponent images={images} folder={'certificates'} titles={titles} mode="light"/>
         </section>
     )
 }

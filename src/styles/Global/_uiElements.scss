@@ -43,6 +43,116 @@
 
 
 
+
+//Gallery V2
+
+.gallery-container-small {
+    max-width: 52rem;
+    transition: all 0.5s;
+
+    @media only screen and (max-width: 720px) {
+        max-width: 42rem;
+    }
+    @media only screen and (max-width: 600px) {
+        max-width: 32rem;
+    }
+}
+
+
+.gallery-container-large {
+    max-width: 92rem;
+    transition: all 0.5s;
+
+    @media only screen and (max-width: 1600px) {
+        max-width: 72rem;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        max-width: 52rem;
+    }
+
+    @media only screen and (max-width: 900px) {
+        max-width: 48rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        max-width: 32rem;
+    }
+}
+
+
+.active-gallery-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: variables.$mainShodws;
+    filter: none !important;
+    transition: all 0.1s;
+}
+
+
+.slick-track {
+    align-items: center;
+    display: flex;
+    gap: 4rem;
+}
+
+.image-container{
+    max-width: 100%;
+
+    .image-wrapper{
+        width: fit-content;
+        margin: 0 auto;
+        filter: blur(4px);
+       
+        img {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    
+    
+    &:hover{
+        cursor: grab;
+    }
+}
+
+.gallery-label {
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+
+.light-gallery {
+
+    .slick-dots li.slick-active button:before{
+        color: #fff !important;
+    }
+
+    .slick-dots li button:before {
+        color: #ffffff;
+    }
+    .slick-prev::before, .slick-next::before  {
+        color: #fff ;
+    }
+
+}
+
+
+.dark-gallery {
+    .slick-prev::before, .slick-next::before  {
+        color: #333 ;
+    }
+}
+
+
+
 //Gallery
 
 
