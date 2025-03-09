@@ -1,6 +1,6 @@
 import { FaJsSquare, FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaSass, FaGitAlt, FaPython } from "react-icons/fa";
 import { SiDjango } from "react-icons/si";
-
+import { SiTypescript, SiExpress, SiMongoose   } from "react-icons/si";
 
 
 const TECHMapper = {
@@ -12,7 +12,10 @@ const TECHMapper = {
     'Sass': <FaSass/>,
     'Django': <SiDjango/>,
     'Git': <FaGitAlt/>,
-    'Python': <FaPython/>
+    'Python': <FaPython/>,
+    "TS": <SiTypescript/>,
+    'Express': <SiExpress/>,
+    "Mongoose": <SiMongoose/>,
 }
 
 export default function SingleTech({title}) {

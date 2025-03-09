@@ -77,7 +77,7 @@ export default function GalleryComponent({images, folder, titles=[], mode='light
                 : 
                     <Slider {...settings}>
                         {loadedImages.map((image, index) =>
-                            <div className="image-container">
+                            <div key={image} className="image-container">
                                 <div className={`image-wrapper ${activeSlide == index && "active-gallery-image"}`}>
                                     <img src={image} alt="Certificate Image" />
                                 </div>

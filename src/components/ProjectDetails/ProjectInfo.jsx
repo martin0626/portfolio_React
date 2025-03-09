@@ -1,7 +1,6 @@
 export default function ProjectInfo({description, codeLink, demoLink}){
 
     const handleSelect = (link)=>{
-        debugger
         if(link){
             window.open(link);
         }

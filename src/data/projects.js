@@ -46,6 +46,17 @@ const PROJECTS = [
         demoLink: '/',
         codeLink: 'https://github.com/martin0626/portfolio_React',
     },
+    {
+        id: '5',
+        name: 'Beauty Services Web App',
+        longDescription: "I am currently developing this page from scratch using React, TypeScript, React Router, React-Redux, Node.js, Mongoose, Express, Tanstack Query, Sass, HTML, and Git. The purpose of this project is to practice both my frontend and backend skills using the MERN stack.\n\nThe functionality of the project is to allow users to find beauty services based on their location quickly and easily. I decided to start this project because it offers a wide range of functionalities to build, making it perfect for improving my skills. I am actively working on it, and you can check my progress on my GitHub account.",
+        shortDescription: '[Currently Working On] Web App for beauty services (hairstyle, nails and etc.), where busness owners can add their saloons, and users can found them easy in one place.',
+        coverImg: "SC_1.png",
+        gallery: ["SC_1.png", "SC_2.png", "SC_3.png", "SC_4.png"],
+        skills: ['React', "TS", 'Node JS', "Express", "Mongoose", "Sass", 'HTML', 'CSS', 'Git'],
+        demoLink: undefined,
+        codeLink: 'https://github.com/martin0626/S-C_ManageApp',
+    },
 ]
 
 
